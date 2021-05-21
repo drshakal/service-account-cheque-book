@@ -23,10 +23,10 @@
         <restConfiguration bindingMode="json" component="jetty"
             host="0.0.0.0" port="8443"/>
         <rest id="rest" path="/api/account-cheque-book">
-            <get id="rest-id"
+            <post id="rest-id"
                 outType="org.mycompany.models.ChequeBookType" uri="/id/{id}">
                 <to uri="direct:getAccountChequeBook"/>
-            </get>
+            </post>
         </rest>
         <route id="getAccountChequeBook">
             <from id="_form1" uri="direct:getAccountChequeBook"/>
